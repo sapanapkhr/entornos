@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/practica.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Caracteristicas de los planetas</h2>
+    <br>
+    Nombre &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Diametro relativo &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Periodo orbital&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; Numero de lunas
+    <br>
+    <hr>
+    Mercurio &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 0,382 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;0,24 años &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 0 
+    Mercurio &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 0,382 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 0,24 años &nbsp; 0 
+    <br>
+    Venus          &nbsp; 0,949 &nbsp; 0,62 años &nbsp; 0
+    <br>
+    Tierra         &nbsp; 1     &nbsp; 1    año  &nbsp; 1
+    <br>
+    Marte          &nbsp; 0,532 &nbsp; 1,88 años &nbsp; 2
+    <br>
+    Jupiter        &nbsp; 11,209 &nbsp;11,86 años &nbsp;49
+    <br>
+    Saturno        &nbsp;   9,449 &nbsp;29,46 años &nbsp;52
+    <br>
+    Urano          &nbsp;   4,007 &nbsp;84,01 años &nbsp;27
+    <br>
+    Neptuno        &nbsp;   3,883 &nbsp;164,80 años &nbsp;13
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
